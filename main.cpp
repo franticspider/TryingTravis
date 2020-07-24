@@ -20,5 +20,5 @@ int main(){
   functionthatfails();
 
 
-	printf("Finished functionthatfails\n");
+	printf("Finished functionthatfails \n");
 }
