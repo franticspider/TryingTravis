@@ -9,4 +9,6 @@ To add a repo to Travis, go to https://travis-ci.org/ and look in the left panel
 
 Next you'll need to clone the project locally so you can add files easily. *This isn't mentioned in the tutorial*
 
-Now you can create the `main.cpp` and `.travis.yml` files as instructed
+Now you can create the `main.cpp` and `.travis.yml` files as instructed.
+
+

@@ -17,5 +17,5 @@ int main(){
 
 	printf("Hello, world!\n");
 
-  //functionthatfails();
+  functionthatfails();
 }
