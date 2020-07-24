@@ -6,9 +6,11 @@
 void functionthatfails(){
 
 	int array[3];
+  int otherarray[2];
 
   //This should segfault
   array[3] = 4;
+  otherarray[0]=5;
 }
 
 
