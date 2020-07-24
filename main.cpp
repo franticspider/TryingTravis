@@ -18,4 +18,7 @@ int main(){
 	printf("Hello, world!\n");
 
   functionthatfails();
+
+
+	printf("Finished functionthatfails\n");
 }
