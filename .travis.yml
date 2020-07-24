@@ -1,6 +1,15 @@
 language: cpp
 compiler: gcc
 
+before_install:
+- sudo apt-get update -qq
+
+install:
+#cppcheck
+-sudo apt-get install -qq cppcheck
+
 script:
 - g++ main.cpp -o travis_gcc_cpp98
 - ./travis_gcc_cpp98
+#cppcheck
+- cppcheck --quiet --error-exitcode=1
