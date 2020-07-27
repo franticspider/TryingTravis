@@ -8,7 +8,7 @@ before_install:
 
 install:
 #cppcheck
--sudo apt-get install -qq cppcheck
+- sudo apt-get install -qq cppcheck
 
 
 script:
