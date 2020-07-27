@@ -16,4 +16,4 @@ script:
 - g++ main.cpp -o travis_gcc_cpp98
 - ./travis_gcc_cpp98
 #cppcheck
-- cppcheck --quiet --error-exitcode=1
+- cppcheck --quiet --error-exitcode=1 .
