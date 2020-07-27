@@ -1,15 +1,14 @@
 language: cpp
 compiler: gcc
 
+
 before_install:
 - sudo apt-get update -qq
-
 
 
 install:
 #cppcheck
 -sudo apt-get install -qq cppcheck
-
 
 
 script:
