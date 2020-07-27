@@ -1,4 +1,18 @@
 # TryingTravis
+
+## Summary
+
+### Setting up
+
+
+
+
+### Development process
+
+
+
+## Learning Travis
+
 Learning how to set up Travis for a C++ github project
 
 Following the tutorial at https://arne-mertz.de/2017/04/continuous-integration-travis-ci/
@@ -18,3 +32,12 @@ OK, I've followed the tutorial this far, but can't yet see two things:
 
 Maybe step 2 is always manual - I need to understand more clearly about branches and merges on my own project (although I got the hang of doing it in industry, that was part of a wider devops program). 
 
+## Troubleshooting
+
+### Bug? I've noticed is that if the `.travis.yml` file is the only thing that's updated, travis-ci website doesn't pick up the change
+
+This is not the case! to fix: 
+
+- Click on "more options"->requests on the r.h.s. of the web page - this will show the history of your builds. It has comments in the right hand column, and if there's a problem with the yml file, it flags 'could not parse'
+- you can check the yaml syntax at http://www.yamllint.com/ to try and find the bug
+- in this case the problem was that the line `-sudo apt-get install -qq cppcheck` should have had a space between the `-` and the command to read `- sudo apt-get install -qq cppcheck`. 
