@@ -32,6 +32,14 @@ OK, I've followed the tutorial this far, but can't yet see two things:
 
 Maybe step 2 is always manual - I need to understand more clearly about branches and merges on my own project (although I got the hang of doing it in industry, that was part of a wider devops program). 
 
+## Unit test frameworks
+
+First thing I'm trying is catch2: https://github.com/catchorg/Catch2 as it is supposed to be the simplest. 
+
+To integrate with travis-ci, I folowed https://github.com/justiceadamsUNI/CPP-Unit-Testing-Suite-With-CI
+
+
+
 ## Troubleshooting
 
 ### Bug? I've noticed is that if the `.travis.yml` file is the only thing that's updated, travis-ci website doesn't pick up the change
