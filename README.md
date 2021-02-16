@@ -1,9 +1,13 @@
 # TryingTravis
 
+A personal summary of my experience in setting up a free and open-source C++ project with continuous integration
+
 ## Summary
 
 ### Setting up
 
+- write `.travis.yml`, which sets up the environment for `travis-ci.org`, compiles the code and runs the tests
+- write a script which runs the tests - in this repo the script is `RunAllTests.sh`. 
 
 
 
@@ -11,15 +15,15 @@
 
 
 
-## Learning Travis
+## Notes while Learning Travis
 
 Learning how to set up Travis for a C++ github project
 
-Following the tutorial at https://arne-mertz.de/2017/04/continuous-integration-travis-ci/
+Following the tutorial at [https://arne-mertz.de/2017/04/continuous-integration-travis-ci/]
 
 NB: I already had gitub and travis accounts, but I hadn't successfully linked them together
 
-To add a repo to Travis, go to https://travis-ci.org/ and look in the left panel. Click on the `+` sign next to the My Repositories tab and turn the project you want to add to 'on' via the button down the right hand side
+To add a repo to Travis, go to [https://travis-ci.org/] and look in the left panel. Click on the `+` sign next to the My Repositories tab and turn the project you want to add to 'on' via the button down the right hand side
 
 Next you'll need to clone the project locally so you can add files easily. *This isn't mentioned in the tutorial*
 
@@ -34,9 +38,19 @@ Maybe step 2 is always manual - I need to understand more clearly about branches
 
 ## Unit test frameworks
 
-First thing I'm trying is catch2: https://github.com/catchorg/Catch2 as it is supposed to be the simplest. 
+First thing I'm trying is catch2: [https://github.com/catchorg/Catch2] as it is supposed to be the simplest. 
 
-To integrate with travis-ci, I folowed https://github.com/justiceadamsUNI/CPP-Unit-Testing-Suite-With-CI
+To integrate with travis-ci, I folowed [https://github.com/justiceadamsUNI/CPP-Unit-Testing-Suite-With-CI]. The idea is to have a script called `RunAllTests.sh`, which builds the tests in the tests directory, and then runs them. In this way, the contents of `.travis.yml` can be relatively simple
+
+
+
+## Branch-Merge cycle
+
+If we do everything on master, then we can break the 'release' version - because that version *is* master. 
+
+The workflow should look like this: 
+
+https://guides.github.com/introduction/flow/
 
 
 

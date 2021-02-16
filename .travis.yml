@@ -8,13 +8,13 @@ before_install:
 
 install:
 #cppcheck
--sudo apt-get install -qq cppcheck
+- sudo apt-get install -qq cppcheck
 
 
 
 script:
-- g++ main.cpp -o travis_gcc_cpp98
-- ./travis_gcc_cpp98
+# - g++ main.cpp -o travis_gcc_cpp98
+# - ./travis_gcc_cpp98
 #cppcheck
 - cppcheck --quiet --error-exitcode=1 .
 - sh RunAllTests.sh
