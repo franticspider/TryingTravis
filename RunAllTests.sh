@@ -5,6 +5,8 @@ echo "  compiling.."
 
 g++ main.cpp -o travis_gcc_cpp98
 ./travis_gcc_cpp98
+
+echo "Checking src with cppcheck.."
 cppcheck --quiet --error-exitcode=1 main.cpp
 
 
